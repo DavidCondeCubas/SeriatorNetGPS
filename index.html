@@ -26,11 +26,33 @@
     $(document).ready(function () {
         $("#homepage").hide();
 
+
         $( "#loginButton" ).click(function() {
             $("#homepage").show();
             $("#divLogin").hide();
-
+            $("#page1").show();
+            $("#page2").hide();
+            $("#page3").hide();
         });
+
+         $( "#top5" ).click(function() {
+            $("#page1").show();
+            $("#page2").hide();
+            $("#page3").hide();
+        });
+
+        $( "#misSeries" ).click(function() {
+            $("#page1").hide();
+            $("#page2").show();
+            $("#page3").hide();
+        });
+
+        $( "#recomendadosParaMi" ).click(function() {
+            $("#page1").hide();
+            $("#page2").hide();
+            $("#page3").show();
+        });
+        
 
     });
 </script>
@@ -64,16 +86,16 @@
                                 </div>
                             </div>
                         </div>
-                        <<div id="homepage">
+                        <div id="homepage">
                             <nav class="navbar navbar-inverse">
                                     <div class="container-fluid">
                                         <div class="navbar-header">
                                         <a class="navbar-brand" href="#"><strong>Seriator</strong></a>
                                         </div>
                                         <ul id="navSeriator" class="nav navbar-nav">
-                                        <li class="active"><a href="#">Top 5 Series</a></li>
-                                        <li><a href="#">Mis Series</a></li>
-                                        <li><a href="#">Recomendados para mi</a></li>
+                                        <li id="top5" class="active"><a href="#">Top 5 Series</a></li>
+                                        <li><a id="misSeries" href="#">Mis Series</a></li>
+                                        <li><a id="recomendadosParaMi" href="#">Recomendados para mi</a></li>
                                         </ul>
                                         <form class="navbar-form navbar-left" action="/action_page.php">
                                         <div class="input-group">
@@ -129,8 +151,48 @@
                                                         </div>
                                                 </div>
                                 </div>
+                                <div id="page2" class="row">
+                                    <ul class="list-group">
+                                    
+                                        <li id="liSimpsons" class="list-group-item">1. The Simpsons (1989-?)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">2. The big bang theory (2007-?)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">3. House M. D. (2004-2012)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">4. Game of Thrones (2011-?)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">5. Friends (1994-2004)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">6. How I Met Your Mother (2005-2014)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">7. Lost (2004-2010)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">8. The Walking Dead (2010-?)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">9. Buffy the Vampire Slayer (1997-2003)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li>
+                                        <li class="list-group-item">10. Two and a half Men (2003-?)<span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span><span class=" glyphicon glyphicon-star" style="color:gold"></span></li 
+                                    </ul>
+                                    
+                                </div>
                                 
+                                <div id="page3" class="row">
+                                        <div class="card text-center" style="margin-left: 40px;width: 18rem;">
+                                                <img class="card-img-top" src="https://images2.imgbox.com/37/81/pYkP7dLg_o.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h1 class="card-title"><strong>Black Mirror</strong></h1>
+                                                    <p class="card-text">Black Mirror es una serie de televisión británica creada por Charlie Brooker y producida por Zeppotron para Endemol. La serie gira en torno a cómo la tecnología afecta nuestras vidas, en ocasiones sacando lo peor de nosotros; Brooker ha señalado que «cada episodio tiene un tono diferente... </p>
+                                                    <span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span>                                                </div>
+                                        </div>
+                                        <div class="card text-center" style="width: 18rem;">
+                                                <img class="card-img-top" src="http://www.dodmagazine.es/wp-content/uploads/2018/01/la-peste-serie-banda-sonora-julio-de-la-rosa.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h1 class="card-title"><strong>La Peste</strong></h1>
+                                                    <p class="card-text">La peste es una serie de televisión española, una producción original de Movistar+ creada por Alberto Rodríguez y Rafael Cobos. Narra una historia ambientada en la ciudad de Sevilla durante el siglo XVI, con el telón de fondo de una de las epidemias de peste que asolaron la ciudad en ese periodo.</p>
+                                                    <span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span>                                                </div>
+                                        </div>
+                                        <div class="card text-center" style="width: 18rem;">
+                                                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Narcos_season_1.png/250px-Narcos_season_1.png" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h1 class="card-title"><strong>Narcos</strong></h1>
+                                                    <p class="card-text">Narcos es una serie web de ficción histórica basada en la lucha contra el narcotráfico en Colombia durante los años 1990. Los protagonistas de las dos primeras temporadas son dos agentes de la DEA estadounidense y su principal objetivo, el líder del Cartel de Medellín, Pablo Escobar. </p>
+                                                    <span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span>
+                                                </div>
+                                </div>
                         </div>
+                        
                 </div>
         </div>
               

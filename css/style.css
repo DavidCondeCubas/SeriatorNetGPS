@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+#page2 ul li{
+  margin-left: 14px;
+  font-size: large;
+
+}
+
 .card{
   width: 350px !important;
 margin-top: 5px;
