@@ -25,7 +25,7 @@
 <script>
     $(document).ready(function () {
         $("#homepage").hide();
-
+        $("#top5").css("background-color", "black");
 
         $( "#loginButton" ).click(function() {
             $("#homepage").show();
@@ -39,18 +39,27 @@
             $("#page1").show();
             $("#page2").hide();
             $("#page3").hide();
+            $("#top5").css("background-color", "black");
+            $("#misSeries").css("background-color", "transparent");
+            $("#recomendadosParaMi").css("background-color", "transparent");
         });
 
         $( "#misSeries" ).click(function() {
             $("#page1").hide();
             $("#page2").show();
             $("#page3").hide();
+            $("#top5").css("background-color", "transparent");
+            $("#misSeries").css("background-color", "black");
+            $("#recomendadosParaMi").css("background-color", "transparent");
         });
 
         $( "#recomendadosParaMi" ).click(function() {
             $("#page1").hide();
             $("#page2").hide();
             $("#page3").show();
+            $("#top5").css("background-color", "transparent");
+            $("#misSeries").css("background-color", "transparent");
+            $("#recomendadosParaMi").css("background-color", "black");
         });
         
 
@@ -93,7 +102,7 @@
                                         <a class="navbar-brand" href="#"><strong>Seriator</strong></a>
                                         </div>
                                         <ul id="navSeriator" class="nav navbar-nav">
-                                        <li id="top5" class="active"><a href="#">Top 5 Series</a></li>
+                                        <li id="top5"><a href="#">Top 5 Series</a></li>
                                         <li><a id="misSeries" href="#">Mis Series</a></li>
                                         <li><a id="recomendadosParaMi" href="#">Recomendados para mi</a></li>
                                         </ul>
