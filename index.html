@@ -26,13 +26,37 @@
     $(document).ready(function () {
         $("#homepage").hide();
         $("#top5").css("background-color", "black");
+        $("#mensajeError").hide();
+        $("#divRegister").hide();
 
-        $( "#loginButton" ).click(function() {
-            $("#homepage").show();
-            $("#divLogin").hide();
-            $("#page1").show();
-            $("#page2").hide();
-            $("#page3").hide();
+        $( "#loginButton" ).click(function() {  
+            var pass = $("#passForm").val();
+            if (pass.length < 8) {
+                $("#mensajeError").show();
+            }
+            else{
+                $("#homepage").show();
+                $("#divLogin").hide();
+                $("#page1").show();
+                $("#page2").hide();
+                $("#page3").hide();
+            }
+        });
+
+        $( "#registerButton").click(function() {  
+                $("#divRegister").hide();
+                $("#homepage").show();
+                $("#divLogin").hide();
+                $("#page1").show();
+                $("#page2").hide();
+                $("#page3").hide();
+        });
+
+        $( "#registrarse").click(function() {  
+
+                $("#divLogin").hide();
+                $("#divRegister").show();
+
         });
 
          $( "#top5" ).click(function() {
@@ -85,16 +109,44 @@
                                                 <input class="form-control" placeholder="Usuario" name="email" type="text">
                                             </div>
                                             <div class="form-group">
-                                                <input class="form-control" placeholder="Contraseña" name="password" type="password" value="">
+                                                <input id="passForm" class="form-control" placeholder="Contraseña" name="password" type="password" value="">
                                             </div>
-
+                                            <div class="form-group" id="mensajeError">Contraseña incorrecta (min 8 digitos)</div>
                                             <input class="btn btn-lg btn-warning btn-block" type="button" id="loginButton" value="Login">
+                                            <div class="form-group" id="registrarse" style="color:black"><a>Aún no tienes cuenta?</a></div>
                                         </fieldset>
                                           </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div id="divRegister" class="row">
+                            <div class="login col-md-4">
+                                <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h3 class="panel-title">Registro</h3>
+                                     </div>
+                                      <div class="panel-body">
+                                        <form accept-charset="UTF-8" role="form">
+                                        <fieldset>
+                                              <div class="form-group">
+                                                <input class="form-control" placeholder="Usuario" name="email" type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="passForm2" class="form-control" placeholder="Contraseña" name="text" type="password" value="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="emailForm" class="form-control" placeholder="Email" name="email" type="text" value="">
+                                            </div>
+                                            <input class="btn btn-lg btn-warning btn-block" type="button" id="registerButton" value="Registrarse">
+                                           
+                                        </fieldset>
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div id="homepage">
                             <nav class="navbar navbar-inverse">
                                     <div class="container-fluid">
@@ -102,7 +154,7 @@
                                         <a class="navbar-brand" href="#"><strong>Seriator</strong></a>
                                         </div>
                                         <ul id="navSeriator" class="nav navbar-nav">
-                                        <li id="top5"><a href="#">Top 5 Series</a></li>
+                                        <li id="top5"><a href="#">Top Series</a></li>
                                         <li><a id="misSeries" href="#">Mis Series</a></li>
                                         <li><a id="recomendadosParaMi" href="#">Recomendados para mi</a></li>
                                         </ul>
@@ -181,21 +233,21 @@
                                         <div class="card text-center" style="margin-left: 40px;width: 18rem;">
                                                 <img class="card-img-top" src="https://images2.imgbox.com/37/81/pYkP7dLg_o.jpg" alt="Card image cap">
                                                 <div class="card-body">
-                                                    <h1 class="card-title"><strong>Black Mirror</strong></h1>
+                                                    <h1 class="card-title">Mas vista del mes: <strong>Black Mirror</strong></h1>
                                                     <p class="card-text">Black Mirror es una serie de televisión británica creada por Charlie Brooker y producida por Zeppotron para Endemol. La serie gira en torno a cómo la tecnología afecta nuestras vidas, en ocasiones sacando lo peor de nosotros; Brooker ha señalado que «cada episodio tiene un tono diferente... </p>
                                                     <span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span>                                                </div>
                                         </div>
                                         <div class="card text-center" style="width: 18rem;">
                                                 <img class="card-img-top" src="http://www.dodmagazine.es/wp-content/uploads/2018/01/la-peste-serie-banda-sonora-julio-de-la-rosa.jpg" alt="Card image cap">
                                                 <div class="card-body">
-                                                    <h1 class="card-title"><strong>La Peste</strong></h1>
+                                                    <h1 class="card-title">Mas vista de la semana: <strong>La Peste</strong></h1>
                                                     <p class="card-text">La peste es una serie de televisión española, una producción original de Movistar+ creada por Alberto Rodríguez y Rafael Cobos. Narra una historia ambientada en la ciudad de Sevilla durante el siglo XVI, con el telón de fondo de una de las epidemias de peste que asolaron la ciudad en ese periodo.</p>
                                                     <span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span>                                                </div>
                                         </div>
                                         <div class="card text-center" style="width: 18rem;">
                                                 <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Narcos_season_1.png/250px-Narcos_season_1.png" alt="Card image cap">
                                                 <div class="card-body">
-                                                    <h1 class="card-title"><strong>Narcos</strong></h1>
+                                                    <h1 class="card-title">Mas vista del dia: <strong>Narcos</strong></h1>
                                                     <p class="card-text">Narcos es una serie web de ficción histórica basada en la lucha contra el narcotráfico en Colombia durante los años 1990. Los protagonistas de las dos primeras temporadas son dos agentes de la DEA estadounidense y su principal objetivo, el líder del Cartel de Medellín, Pablo Escobar. </p>
                                                     <span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span><span class=" glyphicon glyphicon-star" style="color:lightgray"></span>
                                                 </div>

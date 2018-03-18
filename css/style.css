@@ -4,7 +4,15 @@
   font-size: large;
 
 }
+#mensajeError{
+  color: red;
+  font-size: large;
+}
 
+#registrarse:hover {
+  cursor:pointer;
+ }
+ 
 .card{
   width: 350px !important;
 margin-top: 5px;
